@@ -671,6 +671,11 @@
   dependencies:
     buffer "^6.0.3"
 
+"@kurkle/color@^0.3.0":
+  version "0.3.4"
+  resolved "https://mirrors.cloud.tencent.com/npm/@kurkle/color/-/color-0.3.4.tgz#4d4ff677e1609214fc71c580125ddddd86abcabf"
+  integrity sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://mirrors.cloud.tencent.com/npm/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1845,6 +1850,13 @@ character-reference-invalid@^1.0.0:
   version "1.1.4"
   resolved "https://mirrors.cloud.tencent.com/npm/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
+
+chart.js@^4.4.8:
+  version "4.4.8"
+  resolved "https://mirrors.cloud.tencent.com/npm/chart.js/-/chart.js-4.4.8.tgz#54645b638e9d585099bc16b892947b5e6cd2a552"
+  integrity sha512-IkGZlVpXP+83QpMm4uxEiGqSI7jFizwVtF3+n5Pc3k7sMO+tkd0qxh2OzLhenM0K80xtmAONWGBn082EiBQSDA==
+  dependencies:
+    "@kurkle/color" "^0.3.0"
 
 cheerio-select@^2.1.0:
   version "2.1.0"
@@ -5479,6 +5491,11 @@ vscode-uri@^3.0.8:
   resolved "https://mirrors.cloud.tencent.com/npm/vscode-uri/-/vscode-uri-3.1.0.tgz#dd09ec5a66a38b5c3fffc774015713496d14e09c"
   integrity sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==
 
+vue-chartjs@^5.3.2:
+  version "5.3.2"
+  resolved "https://mirrors.cloud.tencent.com/npm/vue-chartjs/-/vue-chartjs-5.3.2.tgz#c0f2009af6b08845af158ddee9d0a68d9dae631b"
+  integrity sha512-NrkbRRoYshbXbWqJkTN6InoDVwVb90C0R7eAVgMWcB9dPikbruaOoTFjFYHE/+tNPdIe6qdLCDjfjPHQ0fw4jw==
+
 vue-eslint-parser@^9.4.3:
   version "9.4.3"
   resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-9.4.3.tgz#9b04b22c71401f1e8bca9be7c3e3416a4bde76a8"
@@ -5519,7 +5536,7 @@ vue-tsc@^2.1.10:
     "@volar/typescript" "~2.4.11"
     "@vue/language-core" "2.2.4"
 
-vue3-apexcharts@1.8.0:
+vue3-apexcharts@^1.8.0:
   version "1.8.0"
   resolved "https://mirrors.cloud.tencent.com/npm/vue3-apexcharts/-/vue3-apexcharts-1.8.0.tgz#1984648d966aa91bc4dc3e87fa847f5289f7f1cf"
   integrity sha512-5tSD4mXTBbIJ9ir+58qHE6oNtIe0RNgqIRYMKpcsIaxkKtwUww4JhvPkpUFlmiW4OJbbdklgjleXq1lfcM4gdA==

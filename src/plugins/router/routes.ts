@@ -29,6 +29,14 @@ export const routes = [
         component: () => import('@/views/tables/tables.vue'),
       },
       {
+        path: 'charts/apexcharts',
+        component: () => import('@/views/charts/apex-charts.vue'),
+      },
+      {
+        path: 'charts/chartjs',
+        component: () => import('@/views/charts/chartjs.vue'),
+      },
+      {
         path: 'charts/echarts',
         component: () => import('@/views/charts/echarts.vue'),
       },

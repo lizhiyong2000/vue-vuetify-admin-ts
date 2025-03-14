@@ -9,7 +9,7 @@ import MixChart from '@/components/charts/chartjs/MixChart.vue'
 
   <VRow>
     <VCol cols="4">
-      <VCard title="Line Chart" >
+      <VCard title="Line Chart">
         <div id="chart_line" class="chart-container">
           <line-chart id="chart_line" height="100%" width="100%" />
         </div>
@@ -40,8 +40,7 @@ import MixChart from '@/components/charts/chartjs/MixChart.vue'
 .chart-container{
   position: relative;
   width: 100%;
-  height:100%;
-  //height: calc(100vh - 84px);
+  height: 300px;
 }
 </style>
 

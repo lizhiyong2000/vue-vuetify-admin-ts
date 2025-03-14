@@ -2,8 +2,9 @@
 import {Chart as ChartJS, Title, LineElement, PointElement, Tooltip, Legend, BarElement, CategoryScale,Filler, LinearScale} from 'chart.js'
 import {Bar} from 'vue-chartjs'
 import {computed, defineProps} from 'vue'
+import stock_series from "../stock-prices"
 
-ChartJS.register(CategoryScale, PointElement, LineElement, LinearScale, BarElement, Title, Tooltip, Filler,  Legend)
+ChartJS.register(CategoryScale, PointElement, LineElement, LinearScale, BarElement, Title, Tooltip, Filler, Legend)
 
 const props = defineProps({
   labels: Array,
@@ -13,37 +14,41 @@ const props = defineProps({
 })
 
 const chartData =  {
-  labels:  ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: stock_series.statistics2.dates,
   datasets: [
     {
-      type: 'line',
-      label: "Average ($)",
-      borderColor: "#004BA8",
-      backgroundColor: "#004BA8",
-      borderWidth: 2,
-      data: [40, 39, 10, 40, 39, 80, 40],
-      tension: 0.1,
-    },
-    {
-      type: 'line',
-      label: "Trend ($)",
-      backgroundColor: "#E57A44",
-      borderColor: "#E57A44",
-      borderWidth: 2,
-      data: [28, 32, 20, 30, 34, 60, 45],
-      tension: 0.1,
-    },
-    {
       type: 'bar',
-      label: "Min - Max ($)",
-      data: [[28, 40], [39, 32], [10, 20], [40, 30], [39, 34], [80, 60], [40, 45]],
-      backgroundColor: '#188145a8',
+      label: stock_series.statistics2.statistics.TEAM_A.name,
+      // borderColor: "#004BA8",
+      // backgroundColor: "#004BA8",
+      borderWidth: 2,
+      data: stock_series.statistics2.statistics.TEAM_A.data,
+      tension: 0.1,
+    },
+    {
+      type: 'line',
+      label: stock_series.statistics2.statistics.TEAM_B.name,
+      // backgroundColor: "#E57A44",
+      // borderColor: "#E57A44",
+      borderWidth: 2,
+      data: stock_series.statistics2.statistics.TEAM_B.data,
+      tension: 0.1,
+      fill: 'start',
+      cubicInterpolationMode: 'monotone',
+    },
+    {
+      type: 'line',
+      label: stock_series.statistics2.statistics.TEAM_C.name,
+      data: stock_series.statistics2.statistics.TEAM_C.data,
+      // backgroundColor: '#188145a8',
       radius:  3,
+      cubicInterpolationMode: 'monotone',
     },
   ]
 }
 
 const chartOptions = {
+  maintainAspectRatio: false,
   tooltips: {
     mode: 'index',
     intersect: true,
@@ -53,29 +58,34 @@ const chartOptions = {
     mode: 'index'
   },
   responsive: true,
-  title: {
-    display: true,
-    text: "Sale Price ($)"
-  },
+  // title: {
+  //   display: true,
+  //   text: "Sale Price ($)"
+  // },
   scales: {
     x: {
       stacked: true,
+      type: 'time',
       time: {
-        // Luxon format string
-        tooltipFormat: 'DD T'
+        parser: 'DD/MM/YYYY',
+        unit: 'day',
+        // unitStepSize: 5,
+        displayFormats: {
+          day: 'DD MMM'
+        },
+        tooltipFormat: 'DD MMM YYYY'
       },
-      format: "HH mm",
-      title: {
-        display: true,
-        text: 'Date'
-      }
+      // title: {
+      //   display: true,
+      //   text: 'Date'
+      // }
     },
     y: {
       stacked: false,
-      title: {
-        display: true,
-        text: 'Cents per kg'
-      },
+      // title: {
+      //   display: true,
+      //   text: 'Cents per kg'
+      // },
       suggestedMin: 0,
       suggestedMax:  10
     }

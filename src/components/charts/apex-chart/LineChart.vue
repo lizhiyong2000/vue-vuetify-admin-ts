@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import VueApexCharts from 'vue3-apexcharts'
-import stock_series from "./stock-prices"
+import stock_series from "../stock-prices"
 import {ApexOptions} from 'apexcharts'
+import imgUrl from '@/assets/images/ico-instagram.png'
 
 const chartOptions:ApexOptions = {
   chart: {
     height: 350,
     type: 'line',
+    toolbar: {
+      show: false
+    },
     id: 'areachart-2'
   },
   annotations: {
@@ -92,7 +96,7 @@ const chartOptions:ApexOptions = {
         size: 0
       },
       image: {
-        path: '@/assets/images/ico-instagram.png'
+        path: imgUrl
       }
     }]
   },
@@ -109,7 +113,7 @@ const chartOptions:ApexOptions = {
     }
   },
   title: {
-    text: 'Line with Annotations',
+    // text: 'Line with Annotations',
     align: 'left'
   },
   labels: stock_series.monthDataSeries1.dates,
@@ -126,7 +130,7 @@ const series = [{
 
 <template>
   <div id="chart">
-    <vue-apex-charts type="bar" height="350" :options="chartOptions" :series="series"></vue-apex-charts>
+    <vue-apex-charts type="line" height="350" :options="chartOptions" :series="series"></vue-apex-charts>
   </div>
 </template>
 <style scoped lang="scss">

@@ -5,6 +5,9 @@ import {ApexOptions} from 'apexcharts'
 const chartOptions:ApexOptions = {
   chart: {
     type: 'bar',
+    toolbar: {
+      show: false
+    },
     height: 350
   },
   plotOptions: {

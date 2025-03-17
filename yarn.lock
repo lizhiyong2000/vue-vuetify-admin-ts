@@ -5506,6 +5506,18 @@ vue-chartjs@^5.3.2:
   resolved "https://mirrors.cloud.tencent.com/npm/vue-chartjs/-/vue-chartjs-5.3.2.tgz#c0f2009af6b08845af158ddee9d0a68d9dae631b"
   integrity sha512-NrkbRRoYshbXbWqJkTN6InoDVwVb90C0R7eAVgMWcB9dPikbruaOoTFjFYHE/+tNPdIe6qdLCDjfjPHQ0fw4jw==
 
+vue-demi@^0.13.11:
+  version "0.13.11"
+  resolved "https://mirrors.cloud.tencent.com/npm/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"
+  integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
+
+vue-echarts@^7.0.3:
+  version "7.0.3"
+  resolved "https://mirrors.cloud.tencent.com/npm/vue-echarts/-/vue-echarts-7.0.3.tgz#bf79f7ee0144bbdc6aee5610e8443fed91f6abbe"
+  integrity sha512-/jSxNwOsw5+dYAUcwSfkLwKPuzTQ0Cepz1LxCOpj2QcHrrmUa/Ql0eQqMmc1rTPQVrh2JQ29n2dhq75ZcHvRDw==
+  dependencies:
+    vue-demi "^0.13.11"
+
 vue-eslint-parser@^9.4.3:
   version "9.4.3"
   resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-9.4.3.tgz#9b04b22c71401f1e8bca9be7c3e3416a4bde76a8"

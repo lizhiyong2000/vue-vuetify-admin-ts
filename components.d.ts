@@ -45,6 +45,7 @@ declare module 'vue' {
     LineMarker: typeof import('./src/components/charts/echarts/LineMarker.vue')['default']
     MixChart: typeof import('./src/components/charts/apex-chart/MixChart.vue')['default']
     MoreBtn: typeof import('./src/@core/components/MoreBtn.vue')['default']
+    PieChart: typeof import('./src/components/charts/echarts/PieChart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TableBasic: typeof import('./src/components/tables/TableBasic.vue')['default']

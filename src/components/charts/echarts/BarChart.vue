@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { LineChart,BarChart } from "echarts/charts";
+import { BarChart } from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
@@ -17,7 +17,6 @@ import * as echarts from 'echarts';
 
 use([
   CanvasRenderer,
-  LineChart,
   BarChart,
   TitleComponent,
   TooltipComponent,
@@ -53,7 +52,7 @@ const option = ref({
     itemWidth: 14,
     itemHeight: 5,
     itemGap: 13,
-    data: Object.keys(stock_series.statistics2.statistics),
+    data: Object.keys(stock_series.statistics1.statistics),
     right: '4%',
     // textStyle: {
     //   fontSize: 12,
@@ -62,7 +61,7 @@ const option = ref({
   },
   grid: {
     left: '20',
-    right: '20',
+    right: '60',
     bottom: '20',
     containLabel: true
   },
@@ -74,7 +73,7 @@ const option = ref({
     //     color: '#57617B'
     //   }
     // },
-    data: stock_series.statistics2.dates,
+    data: stock_series.statistics1.dates,
   }],
   yAxis: [{
     type: 'value',
@@ -102,7 +101,7 @@ const option = ref({
     // }
   }],
   series: [{
-    name: stock_series.statistics2.statistics.TEAM_A.name,
+    name: stock_series.statistics1.statistics.NetProfit.name,
     type: 'bar',
     // smooth: true,
     symbol: 'circle',
@@ -114,10 +113,10 @@ const option = ref({
       }
     },
     barWidth:"20",
-    data: stock_series.statistics2.statistics.TEAM_A.data,
+    data: stock_series.statistics1.statistics.NetProfit.data,
   }, {
-    name: stock_series.statistics2.statistics.TEAM_B.name,
-    type: 'line',
+    name: stock_series.statistics1.statistics.Revenue.name,
+    type: 'bar',
     smooth: true,
     symbol: 'circle',
     symbolSize: 5,
@@ -128,10 +127,11 @@ const option = ref({
       }
     },
     areaStyle: {},
-    data: stock_series.statistics2.statistics.TEAM_B.data,
+    barWidth:"20",
+    data: stock_series.statistics1.statistics.Revenue.data,
   }, {
-      name: stock_series.statistics2.statistics.TEAM_C.name,
-      type: 'line',
+      name: stock_series.statistics1.statistics.FreeCashFlow.name,
+      type: 'bar',
       smooth: true,
       symbol: 'circle',
       symbolSize: 5,
@@ -141,7 +141,9 @@ const option = ref({
           width: 3
         }
       },
-      data: stock_series.statistics2.statistics.TEAM_C.data,
+      barWidth:"20",
+
+      data: stock_series.statistics1.statistics.FreeCashFlow.data,
     }]
 });
 </script>
@@ -149,13 +151,9 @@ const option = ref({
 
 
 <template>
-  <v-chart class="chart" autoresize :option="option" />
+  <v-chart :option="option" style="width: 100%;height:400px;" autoresize ref="chart"/>
 </template>
 
 
 <style scoped>
-.chart {
-  width: 100%;
-  height: 400px;
-}
 </style>

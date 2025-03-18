@@ -82,7 +82,7 @@ const series =  [{
 
 <template>
   <div id="chart">
-    <vue-apex-charts type="bar" height="350" :options="chartOptions" :series="series"></vue-apex-charts>
+    <vue-apex-charts type="bar" :options="chartOptions" :series="series"></vue-apex-charts>
   </div>
 </template>
 <style scoped lang="scss">

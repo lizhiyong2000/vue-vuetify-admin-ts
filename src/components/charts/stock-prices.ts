@@ -10,11 +10,11 @@ export default
         "data": [76, 85, 101, 98, 87, 105, 91, 114, 94]
       },
       "NetProfit" : {
-        "name": 'Net Profit',
+        "name": 'NetProfit',
         "data": [44, 55, 57, 56, 61, 58, 63, 60, 66]
       },
       "FreeCashFlow" : {
-        "name": 'Free Cash Flow',
+        "name": 'FreeCashFlow',
         "data": [35, 41, 36, 26, 45, 48, 52, 53, 41]
       }
     }
@@ -25,15 +25,15 @@ export default
     ],
     "statistics": {
       "TEAM_A" : {
-        name: 'TEAM A',
+        name: 'TEAM_A',
         data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
       },
       "TEAM_B" :{
-        name: 'TEAM B',
+        name: 'TEAM_B',
         data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
       },
       "TEAM_C" :{
-        name: 'TEAM C',
+        name: 'TEAM_C',
         data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
       }
     }

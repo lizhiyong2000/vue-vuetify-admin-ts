@@ -6,7 +6,8 @@ import { PieChart } from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
-  LegendComponent
+  LegendComponent,
+  GridComponent
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
 import { ref, provide } from "vue";
@@ -16,7 +17,8 @@ use([
   PieChart,
   TitleComponent,
   TooltipComponent,
-  LegendComponent
+  LegendComponent,
+  GridComponent
 ]);
 
 // provide(THEME_KEY, "dark");
@@ -34,6 +36,13 @@ const option = ref({
     orient: "vertical",
     left: "left",
     data: ["Direct", "Email", "Ad Networks", "Video Ads", "Search Engines"]
+  },
+  grid: {
+    top: 100,
+    left: '2%',
+    right: '2%',
+    bottom: '2%',
+    containLabel: true
   },
   series: [
     {
@@ -68,6 +77,7 @@ const option = ref({
 
 <style scoped>
 .chart {
+  width: 100%;
   height: 400px;
 }
 </style>

@@ -77,7 +77,7 @@ const chartData = {
 
 const chartOptions={
   responsive: true,
-  maintainAspectRatio: true,
+  maintainAspectRatio: false,
   scales: {
     // x: {
     //   type: 'time',
@@ -124,9 +124,7 @@ const chartOptions={
 
 <template>
   <!-- 外層的 div 可以控制圖表的寬度與高度 -->
-  <div id="chart">
-    <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
-  </div>
+    <Bar :options="chartOptions" :data="chartData" />
 </template>
 
 

@@ -6,7 +6,8 @@ import { LineChart } from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
-  LegendComponent
+  LegendComponent,
+  GridComponent
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
 import { ref, provide } from "vue";
@@ -19,23 +20,24 @@ use([
   LineChart,
   TitleComponent,
   TooltipComponent,
-  LegendComponent
+  LegendComponent,
+  GridComponent
 ]);
 
 // provide(THEME_KEY, "dark");
 
 const option = ref({
   // backgroundColor: '#394056',
-  title: {
-    top: 20,
-    text: 'Requests',
-    // textStyle: {
-    //   fontWeight: 'normal',
-    //   fontSize: 16,
-    //   color: '#F1F1F3'
-    // },
-    left: '1%'
-  },
+  // title: {
+  //   top: 20,
+  //   text: 'Requests',
+  //   // textStyle: {
+  //   //   fontWeight: 'normal',
+  //   //   fontSize: 16,
+  //   //   color: '#F1F1F3'
+  //   // },
+  //   left: '1%'
+  // },
   tooltip: {
     trigger: 'axis',
     // axisPointer: {
@@ -58,10 +60,9 @@ const option = ref({
     // }
   },
   grid: {
-    top: 100,
-    left: '2%',
-    right: '2%',
-    bottom: '2%',
+    left: '20',
+    right: '20',
+    bottom: '20',
     containLabel: true
   },
   xAxis: [{
@@ -174,12 +175,13 @@ const option = ref({
 
 
 <template>
-  <v-chart class="chart" :option="option" />
+  <v-chart class="chart" autoresize :option="option" />
 </template>
 
 
 <style scoped>
 .chart {
+  width: 100%;
   height: 400px;
 }
 </style>

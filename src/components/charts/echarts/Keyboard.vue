@@ -3,7 +3,6 @@
 import * as echarts from 'echarts'
 // import resize from './mixins/resize'
 
-
 interface Props {
   className?: string
   id?: string
@@ -14,7 +13,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   className: 'chart',
   id: 'chart',
-  width: '200px',
+  width: '',
   height: '200px'
 })
 

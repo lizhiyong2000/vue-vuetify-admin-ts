@@ -72,7 +72,7 @@ const data = {
 }
 
 const options = {
-  maintainAspectRatio: true,
+  maintainAspectRatio: false,
   tooltips: {
     mode: 'index',
     intersect: true,
@@ -158,9 +158,7 @@ const options = {
 
 <template>
   <!-- 外層的 div 可以控制圖表的寬度與高度 -->
-  <div id="chart">
-    <Line id="my-chart-id" :options="options" :data="data" />
-  </div>
+    <Line :options="options" :data="data" />
 </template>
 
 
